@@ -31,7 +31,7 @@ export const Hero = () => {
     gsap.to("#cta", {
       opacity: 1,
       y: 0,
-      duration: 2,
+      duration: 1.5,
       ease: "power1.inOut",
       delay: 1.5,
     });
