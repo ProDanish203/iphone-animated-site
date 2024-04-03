@@ -89,7 +89,7 @@ export const VideoCarousel = () => {
             currentProgress = progress;
 
             gsap.to(videoDivRef.current[videoId], {
-              width: isMobile ? "10vw" : "4vw",
+              width: isMobile ? "20vw" : "4vw",
             });
             gsap.to(span[videoId], {
               width: `${currentProgress}%`,
@@ -213,6 +213,12 @@ export const VideoCarousel = () => {
                 className="absolute h-full w-full rounded-full"
                 // @ts-ignore
                 ref={(el) => (videoSpanRef.current[i] = el)}
+                onClick={() =>
+                  setVideo((prev) => ({
+                    ...prev,
+                    videoId: i,
+                  }))
+                }
               />
             </span>
           ))}
